@@ -15,4 +15,5 @@ This code is by no means "done". I cannot claim that it works for every possible
 3) Non-Coil Magnetic Fields
 As I am giving suggestions, you may assume that I would like this to be a "living" code. Modify it how you need, append the theory booklet, and this README and then add 
 a folder to the repository with your modification, that way troubleshooting will be easy, and progress will be obvious. I hope that this code proves useful to you.
+
 -Sidney Williams (September 2021)
