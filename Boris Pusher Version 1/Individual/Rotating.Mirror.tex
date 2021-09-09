@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{proof}{Proof}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\begin{document}
+The following is a transcription of Tal Rubin's handwritten notes, thank you Tal.
+
+We can write the kinetic energy of a particle as
+\begin{equation}\label{basickinen}
+W_{kin}=W_{\parallel}+W_{\perp}+W_D
+\end{equation}
+Where $W_{\parallel}=\frac{1}{2}m(\vec{v}\cdot\hat{B})^2$ is the kinetic energy related to the motion along the field, $W_D=\frac{1}{2}mv^2_D$ is the energy associated with the gyrocenter drift velocity:
+\begin{equation}\label{driftvel}
+\vec{v}_D=\frac{\vec{E}\wedge\vec{B}}{B^2}-\frac{\mu}{q}\frac{\nabla B\wedge\vec{B}}{B^2}+\frac{2W_{\parallel}}{q}\frac{\vec{B}\wedge(\hat{B}\cdot\vec{v})\hat{B}}{B^2}\approx\frac{\vec{E}\wedge\vec{B}}{B^2}
+\end{equation}
+We can make the approximation that there is only $E\wedge B$ drift because the other two drifts have a factor of mass to charge which is very small. And $W_{\perp}=\frac{1}{2}mv^2-W_{\parallel}-W_D$ is the remaining perpendicular energy, primarily contributed by gyromotion. We want to know something about $W_D$. To do this, we must define the concept of a Magnetic Surface, which is simply: "A surface defined by its normal at any point $\hat{n}(\vec{r})$ is a "Magnetic Surface" if this normal is paralle to $\vec{B}(\vec{r})$, eg. $\hat{n}\cdot\vec{B}=0$. It is useful to note that $rA_{\theta}=const.$ is a magnetic surface, where $A_{\theta}$ is the angular component of the vector potential. We also have to be aware of the "Isorotation Theorem" which states that 
+\begin{theorem}
+If magnetic surfaces are also equipotential surfaces, then particles under the effect off $E\wedge B$ drift rotate around the axis with the same frequency.
+\end{theorem}
+We also need to state the "cooling corollary"
+\begin{corollary}
+Particles moving along equipotential surfaces gain potential energy equal to exactly twice the energy lost from the azimuthal drift. 
+\end{corollary} 
+\begin{proof}
+Canonical angular momentum is conserved: $L_{\theta}=r(mv_{\theta}+qA_{\theta})=const.$
+Rotation frequency around mirror is $\Omega=\frac{E}{Br}$. If we imagine looking at two 
+different radii in the plasma, we can state $\Omega_a=\Omega_b=\frac{E_a}{B_ar_a}=\frac{E_b}
+{B_br_b}$. Taking the difference of the canonical angular momentum at these to locations we get 
+$\Delta[qrA_{\theta}]=-\Delta[rmv_{\theta}]=-m(r_av_{\theta a}-r_bv_{\theta b})=-m\left(r_a
+\frac{E_a}{B_a}-r_b\frac{E_b}{B_b}\right)$, this last step is taken assuming that the only 
+angular velocity of the guiding center is from drifts. We can rewrite this in terms of rotation 
+frequency: $\Delta[qrA_{\theta}]=m\Omega[r_b^2-r_a^2]$. From the definition of the vector 
+potential: $\iint\vec{B}\cdot d\vec{a}=\oint \vec{A}\cdot d\vec{l}$ which can be directly 
+integrated: $2\pi[r_bA_{\theta}(r_b)-r_aA_{\theta}(r_a)]\approx\pi B[r_b^2-r_a^2]\approx 2\pi rB
+\delta$, where $\delta=r_b-r_a$. Using the definition of the difference in potential $-\delta E=
+\Delta\Phi$, so $\Delta [qrA_{\theta}]\approx\frac{qrB\Delta\Phi}{E}=\frac{-q\Delta\Phi}{\Omega}
+=m\Omega (r_b^2-r_a^2)=2(W_{Db}-W_{Da})\frac{1}{\Omega}$, or $-q\Delta\Phi=2\left(\frac{1}{2}
+m(\Omega r_b)^2-\frac{1}{2}m(\Omega r_a^2)\right)$  
+\end{proof}
+We can now write out the energy balance
+\begin{equation}\label{ebenergy}
+E=W_{kin}+q\Phi=W_{\parallel}+W_{\perp}+W_D+q\Phi
+\end{equation}
+This leads us directly to our new trapping condition by taking the difference of energy at two points in space, E cancels and we get
+\begin{equation}
+\begin{split}
+W_{\parallel}=W_{\parallel 0}-W_{\perp}+W_{\perp0}-W_D+W_{D0}-q\Phi+q\Phi_0=\\
+W_{\parallel0}+(1-R)
+W_{\perp0}+\left(1-\frac{r^2}{r_0^2}\right) W_{D0}
+\end{split}
+\end{equation}
+This then leads to the trapping condition
+\begin{equation}\label{trappingeb}
+W_{\parallel 0}\leq (R-1)W_{\perp 0}+\left(\frac{r^2}{r^2_0}-1\right)W_{D0}
+\end{equation}
+This leads to a larger value on the right hand side. Therefore, adding rotation to a magnetic mirror makes trapping easier.
+\end{document}
