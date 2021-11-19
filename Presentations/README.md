@@ -1,2 +1,0 @@
-This folder contains all of the presentations that have had my name associated. The 2019 ASME one and the PPPL one are both presentations that I gave myself. The first at the 2019 ASME Summer Heat Transfer Conference in Bellevue Washington, and second one was the poster presentation that served as the finale to my internship at the Princeton Plasma Physics Laboratory.
-All other presentations were given by coauthors, but has both my name on it, and work that I did associated with it.
